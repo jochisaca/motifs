@@ -24,38 +24,39 @@ html, body {
   text-align: left;
   margin: 0 auto; /* Horizontally center the container */
   position: relative;
-  word-wrap: break-word; /* Prevent long words from overflowing */
-  word-break: break-word; /* Allow breaking of long words */
-  hyphens: auto; /* Allow hyphenation of words if necessary */
+  overflow: hidden; /* Ensure no content overflows */
+  word-wrap: normal; /* Disable word breaking */
 }
 
 /* Main Text Styling */
 h1 {
-  font-size: 3.25em; /* Keep the original font size for desktop */
+  font-size: 3.25em; /* Main heading font size */
   line-height: 1.2;
   margin-bottom: 10px;
   text-align: left;
   width: 100%;
-  padding-left: 10px; /* Reduced left padding */
+  padding-left: 10px;
   padding-right: 10px;
   box-sizing: border-box;
-  word-wrap: break-word; /* Break long words */
-  hyphens: auto; /* Allow word hyphenation */
+  white-space: normal; /* Ensure text wraps properly */
+  overflow: hidden; /* Hide overflowed text */
+  text-overflow: ellipsis; /* Add ellipses if text overflows */
 }
 
 /* Sub Text Styling */
 p {
-  font-size: 1.3em; /* Keep the original subtext font size for desktop */
+  font-size: 1.3em; /* Subtext font size */
   line-height: 1.6;
   margin-top: 0;
   position: absolute;
   top: 55%;
-  padding-left: 10px; /* Reduced left padding */
-  padding-right: 10px; /* Reduced right padding */
+  padding-left: 10px;
+  padding-right: 10px;
   width: 85%; /* Ensure it doesn't exceed the width of the container */
   box-sizing: border-box;
-  word-wrap: break-word; /* Break long words */
-  hyphens: auto; /* Allow word hyphenation */
+  white-space: normal; /* Ensure text wraps properly */
+  overflow: hidden; /* Hide overflowed text */
+  text-overflow: ellipsis; /* Add ellipses if text overflows */
 }
 
 /* Horizontal Line (hr) */
