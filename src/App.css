@@ -1,0 +1,29 @@
+/* Ensure the app takes up the full height and width of the viewport */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.App {
+  display: flex;
+  flex-direction: column; /* Stack content vertically */
+  justify-content: center; /* Center content vertically */
+  align-items: center; /* Center content horizontally */
+  min-height: 100vh; /* Take full viewport height */
+  background-color: #ffffff; /* Set background to white */
+  position: relative;
+  width: 100%; /* Ensure full width */
+  margin: 0;
+  padding: 0;
+}
+
+/* Move the button container to the top left */
+.button-container {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  display: flex;
+  gap: 10px;
+  z-index: 2;
+}
