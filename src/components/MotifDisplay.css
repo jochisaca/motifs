@@ -1,4 +1,4 @@
-/* Make sure the entire page can scroll if content overflows */
+/* Ensure the entire page can scroll if content overflows */
 html, body {
   height: 100%;
   margin: 0;
@@ -24,6 +24,9 @@ html, body {
   text-align: left;
   margin: 0 auto; /* Horizontally center the container */
   position: relative;
+  word-wrap: break-word; /* Prevent long words from overflowing */
+  word-break: break-word; /* Allow breaking of long words */
+  hyphens: auto; /* Allow hyphenation of words if necessary */
 }
 
 /* Main Text Styling */
@@ -36,6 +39,8 @@ h1 {
   padding-left: 10px; /* Reduced left padding */
   padding-right: 10px;
   box-sizing: border-box;
+  word-wrap: break-word; /* Break long words */
+  hyphens: auto; /* Allow word hyphenation */
 }
 
 /* Sub Text Styling */
@@ -49,6 +54,8 @@ p {
   padding-right: 10px; /* Reduced right padding */
   width: 85%; /* Ensure it doesn't exceed the width of the container */
   box-sizing: border-box;
+  word-wrap: break-word; /* Break long words */
+  hyphens: auto; /* Allow word hyphenation */
 }
 
 /* Horizontal Line (hr) */
@@ -66,21 +73,21 @@ hr {
 /* Media Queries for Smaller Screens */
 @media (max-width: 768px) {
   h1 {
-      font-size: 2.5em; /* Decrease font size on smaller screens */
+    font-size: 2.5em; /* Decrease font size on smaller screens */
   }
 
   p {
-      font-size: 0.85em; /* Decrease subtext font size */
+    font-size: 0.85em; /* Decrease subtext font size */
   }
 }
 
 /* Further Adjustments for Very Small Screens */
 @media (max-width: 480px) {
   h1 {
-      font-size: 2em; /* Further decrease font size */
+    font-size: 2em; /* Further decrease font size */
   }
 
   p {
-      font-size: 0.7em; /* Further decrease subtext font size */
+    font-size: 0.7em; /* Further decrease subtext font size */
   }
 }
