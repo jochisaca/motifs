@@ -70,7 +70,7 @@ hr {
   }
 
   p {
-      font-size: 1.1em; /* Decrease subtext font size */
+      font-size: 0.85em; /* Decrease subtext font size */
   }
 }
 
@@ -81,6 +81,6 @@ hr {
   }
 
   p {
-      font-size: 1em; /* Further decrease subtext font size */
+      font-size: 0.7em; /* Further decrease subtext font size */
   }
 }
