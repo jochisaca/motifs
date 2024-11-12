@@ -1,8 +1,20 @@
+/* Make sure the entire page can scroll if content overflows */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow-y: auto; /* Enable scrolling if content overflows */
+}
+
+/* Container Styling */
 .container {
-  width: 90vw;
-  max-width: 600px;
+  width: 75vw; /* 75% of the screen width */
+  max-width: 600px; /* Maximum width for larger screens */
   aspect-ratio: 1; /* Maintain square aspect ratio */
-  padding: 20px;
+  padding: 20px; /* Adjust padding */
   border-radius: 20px;
   box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
   display: flex;
@@ -10,43 +22,36 @@
   justify-content: flex-start; /* Align elements to the top */
   align-items: flex-start; /* Ensure content is left-aligned */
   text-align: left;
-  margin: 0 auto;
+  margin: 0 auto; /* Horizontally center the container */
   position: relative;
 }
 
+/* Main Text Styling */
 h1 {
-  font-size: 3.25em; /* Adjusted for main heading */
+  font-size: 3.25em; /* Keep the original font size for desktop */
   line-height: 1.2;
   margin-bottom: 10px;
   text-align: left;
   width: 100%;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-left: 10px; /* Reduced left padding */
+  padding-right: 10px;
   box-sizing: border-box;
 }
 
-/* Adjust font size for smaller screens */
-@media (max-width: 768px) {
-  h1 {
-      font-size: 2em; /* Decrease font size on smaller screens */
-  }
-
-  p {
-      font-size: 1.1em; /* Decrease subtext font size on smaller screens */
-  }
+/* Sub Text Styling */
+p {
+  font-size: 1.3em; /* Keep the original subtext font size for desktop */
+  line-height: 1.6;
+  margin-top: 0;
+  position: absolute;
+  top: 55%;
+  padding-left: 10px; /* Reduced left padding */
+  padding-right: 10px; /* Reduced right padding */
+  width: 85%; /* Ensure it doesn't exceed the width of the container */
+  box-sizing: border-box;
 }
 
-/* Further adjust for very small screens */
-@media (max-width: 480px) {
-  h1 {
-      font-size: 1.5em; /* Further decrease font size */
-  }
-
-  p {
-      font-size: 1em; /* Further decrease subtext font size */
-  }
-}
-
+/* Horizontal Line (hr) */
 hr {
   position: absolute;
   top: 50%;
@@ -58,14 +63,24 @@ hr {
   transform: translateX(-50%) translateY(-50%);
 }
 
-p {
-  font-size: 1.2em;
-  line-height: 1.6;
-  margin-top: 0;
-  position: absolute;
-  top: 55%;
-  padding-left: 20px;
-  padding-right: 20px;
-  width: 85%;
-  box-sizing: border-box;
+/* Media Queries for Smaller Screens */
+@media (max-width: 768px) {
+  h1 {
+      font-size: 2.5em; /* Decrease font size on smaller screens */
+  }
+
+  p {
+      font-size: 1.1em; /* Decrease subtext font size */
+  }
+}
+
+/* Further Adjustments for Very Small Screens */
+@media (max-width: 480px) {
+  h1 {
+      font-size: 2em; /* Further decrease font size */
+  }
+
+  p {
+      font-size: 1em; /* Further decrease subtext font size */
+  }
 }
