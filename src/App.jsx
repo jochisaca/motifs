@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import "./Home"; // Import the Home component
-import "./ShopPage"; // Import the ShopPage component
+import Home from './Home';  // Ensure this matches the file name
+import ShopPage from `./ShopPage`; // Import the ShopPage component
 
 const App = () => {
   return (
